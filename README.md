@@ -1,43 +1,87 @@
-# DivvyUp
+# DivvyUp 💸  
+Smart shared expense & group finance manager
 
-## Getting Started
-Welcome to a smarter way to manage your finances! In a world where every penny counts, our App is your key to financial empowerment. Our app is designed to simplify and elevate your money management experience.
-Managing shared expenses can be a daunting task, leading to confusion, disagreements, and time-consuming calculations. Enter DivvyUP, the ultimate solution to streamline shared finances and alleviate the common challenges associated with communal expenses.
+DivvyUp is a full-stack web app that makes splitting bills, tracking group expenses, and understanding your spending painless. Create groups with friends, log transactions, upload receipts, and see who owes whom in seconds.
 
+---
 
+## ✨ Features
 
-## Tech Stack
+- 🧾 **Record daily transactions** (personal & group)
+- 👥 **Create groups with friends** and split expenses
+- 🔁 **Auto-simplify debts** inside a group (who owes whom)
+- 📊 **Visual analytics** for income, savings & expenditure
+- 🧸 **Upload & store bills/receipts** as PDFs
+- 📍 **Track expenses over time** with clear history
+- 🌍 **Real-time currency conversion** for foreign spending
+- 📈 **Easy-to-understand charts** (Recharts)
+- 🔔 **Payment reminders / due notifications**
+- 📤 **Export expenses to spreadsheets** for backup or sharing
+- 🔐 **JWT-based authentication** + optional Google login
 
-1. Node js
-2. Express js
-3. React js
-4. JavaScript
-5. MongoDB
-6. TailwindCSS
-7. Recharts
-8. EmailJS
-9. ReactOAuth2.0
+---
 
+## 🧱 Tech Stack
 
+**Frontend**
 
+- React (Create React App)
+- TailwindCSS
+- Material UI (MUI)
+- Recharts
+- @react-oauth/google (Google login)
+- Axios, React Icons, etc.
 
+**Backend**
 
-### Installation instructions
-1. Clone folder from github .
-2. Run " npm i " for node modules for frontend as well backend.
-2. For backend run npm start.
-3. For frontend run npm start.
+- Node.js
+- Express.js
+- MongoDB + Mongoose
+- Multer (file uploads)
+- JSON Web Tokens (`jsonwebtoken`)
+- bcrypt / bcryptjs (password hashing)
+- dotenv, cors, morgan
 
+**Other**
 
-## Features
-1. Record daily transactions.
-2. Make groups with frineds.
-3. Simplify and settle debts in groups.
-4. Get the best analysis about savings and expenditure.
-5. Save bills and receipts.
-6. Track your expenses.
-7. Realtime currency exchange.
-8. Easy to understand visualization of transactions.
-9. Get notified on due payments.
-10. Export expenses to spreadsheet.
+- MongoDB Atlas (recommended for production)
+- Deployed on Vercel (frontend + backend as separate projects)
 
+---
+
+## 📸 Screenshots
+
+> (These paths work on GitHub if the `Screenshots` folder is at the repo root.)
+
+![Dashboard](Screenshots/1.jpeg)
+![Groups](Screenshots/2.jpeg)
+![Expenses](Screenshots/3.jpeg)
+![Analytics](Screenshots/4.jpeg)
+![Receipts](Screenshots/5.jpeg)
+![Auth](Screenshots/6.jpeg)
+
+---
+
+## 📂 Project Structure
+
+```bash
+DIvvyUP-master/
+├── client/              # React frontend (CRA)
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── server/              # Node/Express backend
+│   ├── config/          # DB config (Mongo connection)
+│   ├── middleware/      # Auth middleware (JWT)
+│   ├── modal/           # Mongoose models (User, Group, Expense, Pdf, etc.)
+│   ├── router/          # Route handlers (user, group, friends, expense...)
+│   ├── services/        # Business logic (expenseServices)
+│   ├── files/           # Uploaded PDFs (receipts/bills)
+│   ├── server.js        # Express app entry
+│   └── package.json
+├── Screenshots/         # App screenshots
+├── LICENSE              # MIT License
+└── README.md
+```
+
+This Project is managed By **Aayush Shukla**
